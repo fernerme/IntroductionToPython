@@ -31,7 +31,7 @@ Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
 
 #I wrote three different pieces of code for this part.
 #Two of them are commented out at the bottom (I don't see a point in deleting them).
-#My "final" piece is the first one (which is NOT commented out. Creates Flower!!).
+#My "final" piece is the first one (which is NOT commented out. Creates flower!!).
 
 #Note to future self: all 3 pieces of code require lines 38 thru 46 (& line
 
