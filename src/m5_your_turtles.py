@@ -28,45 +28,103 @@ Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
 #
 #  Don't forget to COMMIT your work by using  VCS ~ Commit and Push.
 ########################################################################
+
+#I wrote three different pieces of code for this part.
+#Two of them are commented out at the bottom (I don't see a point in deleting them).
+#My "final" piece is the first one (which is NOT commented out. Creates Flower!!).
+
+#Note to future self: all 3 pieces of code require lines 38 thru 46 (& line
+
 import rosegraphics as rg
 window = rg.TurtleWindow()
 
 leftie = rg.SimpleTurtle()
-leftie.pen = rg.Pen('red', 2)
+leftie.pen = rg.Pen('pink', 2)
 leftie.speed = 10
 rightie = rg.SimpleTurtle()
-rightie.pen = rg.Pen('blue', 2)
-rightie.speed =10
+rightie.pen = rg.Pen('purple', 2)
+rightie.speed = 10
 
-rightie.pen_up()
-rightie.forward(150)
-rightie.left(90)
-rightie.pen_down()
-
-leftie.pen_up()
-leftie.left(180)
-leftie.forward(150)
-leftie.right(90)
-leftie.pen_down()
-r1 = 1
-r2 = 2
-
-for k in range(20):
-    leftie.draw_circle(r1)
-    leftie.pen_up()
-    leftie.right(90)
-    leftie.forward(20)
-    leftie.left(90)
-    leftie.pen_down()
-    rightie.draw_circle(r2)
-    rightie.pen_up()
-    rightie.right(90)
-    rightie.forward(30)
-    rightie.left(90)
+leftie.left(60)
+rightie.left(30)
+for k in range(6):
     rightie.pen_down()
-    r1 = r1+20
-    r2 = r2+30
+    x = 1.732050808
+    rightie.forward(50*x)
+    for k in range(3):
+        rightie.left(60)
+        rightie.forward(12.5*x)
+    rightie.pen_up()
+    rightie.left(30)
+    rightie.forward(75)
+    rightie.left(90)
 
-
+    leftie.pen_down()
+    leftie.forward(50 * x)
+    for k in range(3):
+        leftie.left(60)
+        leftie.forward(12.5 * x)
+    leftie.pen_up()
+    leftie.left(30)
+    leftie.forward(75)
+    leftie.left(90)
 
 window.close_on_mouse_click()
+
+######################################################################
+#### First Attempt: Two turtles creating circles
+# rightie.pen_up()
+# rightie.forward(100)
+# rightie.left(90)
+# rightie.pen_down()
+#
+# leftie.pen_up()
+# leftie.left(180)
+# leftie.forward(100)
+# leftie.right(90)
+# leftie.pen_down()
+# r1 = 1
+# r2 = 2
+
+# for k in range(10):
+#     leftie.draw_circle(r1)
+#     leftie.pen_up()
+#     leftie.right(90)
+#     leftie.forward(20)
+#     leftie.left(90)
+#     leftie.pen_down()
+#     rightie.draw_circle(r2)
+#     rightie.pen_up()
+#     rightie.right(90)
+#     rightie.forward(30)
+#     rightie.left(90)
+#     rightie.pen_down()
+#     r1 = r1+20
+#     r2 = r2+30
+#window.close_on_mouse_click()
+
+#### Second Attempt: Two turtles creating a heart
+# leftie.pen_up()
+# leftie.left(90)
+# leftie.forward(25)
+# leftie.left(30)
+#
+# rightie.pen_up()
+# rightie.right(90)
+# rightie.forward(50)
+# rightie.left(150)
+#
+# rightie.pen_down()
+# x = 1.732050808
+# rightie.forward(50*x)
+# for k in range(3):
+#     rightie.left(60)
+#     rightie.forward(12.5*x)
+#
+# leftie.pen_down()
+# for k in range(3):
+#     leftie.forward(12.5*x)
+#     leftie.left(60)
+# leftie.forward(50*x)
+
+#window.close_on_mouse_click()
