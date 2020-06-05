@@ -10,7 +10,7 @@ Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
 ########################################################################
 
 ########################################################################
-# TODO: 2.
+# DONE: 2.
 #
 #  You should have RUN the PREVIOUS module and READ its code.
 #  (Do so now if you have not already done so.)
@@ -51,7 +51,7 @@ for k in range(6):
     rightie.pen_down()
     x = 1.732050808
     rightie.forward(50*x)
-    for k in range(3):
+    for kk in range(3):
         rightie.left(60)
         rightie.forward(12.5*x)
     rightie.pen_up()
@@ -61,7 +61,7 @@ for k in range(6):
 
     leftie.pen_down()
     leftie.forward(50 * x)
-    for k in range(3):
+    for kk in range(3):
         leftie.left(60)
         leftie.forward(12.5 * x)
     leftie.pen_up()
